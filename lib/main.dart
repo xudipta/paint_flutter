@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paint_flutter/widget/paint_handler.dart';
+import 'package:paint_flutter/widget/paint_screen.dart';
 
 
 void main() {
@@ -19,9 +20,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  const Scaffold(
-        body: HomePage(),
-      ),
+      home:  const HomePage(),
+
     );
   }
 }
@@ -35,7 +35,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const PaintHandler();
+    return const PaintScreen();
   }
 }
 

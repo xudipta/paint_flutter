@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 class MyPainter extends CustomPainter{
+   Path path;
+   Color color;
+  MyPainter(this.path, this.color);
   @override
   void paint(Canvas canvas, Size size) {
     // TODO: implement paint
     Paint paint=Paint()
-    ..color= Colors.red;
-    canvas.drawLine(Offset(100,100), Offset(200, 200), paint);
+    ..color= color;
+    canvas.drawPath(path, paint);
   }
 
   @override
